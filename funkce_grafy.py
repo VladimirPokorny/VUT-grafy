@@ -3,7 +3,18 @@ import pandas as pd
 import numpy as np
 import os
 
-# commit n2
+#############################################################
+#   graf_proudy_moment_otacky
+#   Funkce, která vytváří průběhy proudů, momentu a otáček.
+#   Parametry:
+#   tb_t    -> sloupec csv, kde se nachází čas
+#   tb_i1   -> sloupec csv, kde se nachází proud i1
+#   tb_i2   -> sloupec csv, kde se nachází proud i2, pokud není měřen, nastavit "-1"
+#   tb_M    -> sloupec csv, kde se nachází moment
+#   tb_n    -> sloupec csv, kde se nachází otáčky
+#   file    -> cesta k souboru csv, včetně názvu souboru
+#   rozsah1,rozsah2     -> rozsah řádků, mezi kterými se má graf vykreslit
+#############################################################
 
 def graf_proudy_moment_otacky(tb_t, tb_i1, tb_i2, tb_M, tb_n,file,rozsah1,rozsah2):
     table = pd.read_csv(file)
@@ -57,6 +68,16 @@ def graf_proudy_moment_otacky(tb_t, tb_i1, tb_i2, tb_M, tb_n,file,rozsah1,rozsah
     plt.savefig('pdf/' + file + '.pdf', bbox_inches='tight')
     plt.close()
     return 1
+
+#############################################################
+#   graf_otacky_na_Momentu
+#   Funkce, která vytváří závislost otáček na momentu
+#   Parametry:
+#   tb_M    -> sloupec csv, kde se nachází moment
+#   tb_n    -> sloupec csv, kde se nachází otáčky
+#   file    -> cesta k souboru csv, včetně názvu souboru
+#   rozsah1,rozsah2     -> rozsah řádků, mezi kterými se má graf vykreslit
+#############################################################
 
 def graf_otacky_na_Momentu(tb_M, tb_n,file,rozsah1,rozsah2):
     table = pd.read_csv(file)
