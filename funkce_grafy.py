@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 
-#initial commit
+# commit n2
 
 def graf_proudy_moment_otacky(tb_t, tb_i1, tb_i2, tb_M, tb_n,file,rozsah1,rozsah2):
     table = pd.read_csv(file)

@@ -2,7 +2,7 @@ from PyPDF2 import PdfFileReader, PdfFileMerger
 import glob
 import natsort
 
-#initial commit
+# commit n2
 
 pdfs = glob.glob("pdf/*.pdf")  # get all the .txt files
 pdfs = natsort.natsorted(pdfs,reverse=False)
