@@ -4,6 +4,7 @@ import natsort
 from funkce_grafy import graf_proudy_moment_otacky, graf_otacky_na_Momentu
 from PyPDF2 import PdfFileReader, PdfFileMerger
 
+#initial commit
 
 t = []
 i1 = []
