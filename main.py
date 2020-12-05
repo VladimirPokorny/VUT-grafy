@@ -4,8 +4,6 @@ import natsort
 from funkce_grafy import graf_proudy_moment_otacky, graf_otacky_na_Momentu
 from PyPDF2 import PdfFileReader, PdfFileMerger
 
-# commit n2
-
 t = []
 i1 = []
 i2 = []
@@ -73,6 +71,8 @@ for file in files:                   # iterate over the list of files
    graf_proudy_moment_otacky(0,1,2,3,3,file,rozsah1,rozsah2)   #tb_t, tb_i1, tb_i2, tb_M, tb_n,file,rozsah1,rozsah2
    #graf_otacky_na_Momentu(4, 3, file, rozsah1, rozsah2)        #tb_M, tb_n,file,rozsah1,rozsah2
 ################################################
+
+#sloučení všech souborů pdf do jednoho
 
 pdfs = glob.glob("pdf/*.pdf")  # get all the .txt files
 pdfs = natsort.natsorted(pdfs,reverse=False)
